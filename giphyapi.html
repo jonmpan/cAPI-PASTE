@@ -4,12 +4,55 @@
 	<title></title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<!-- <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css" crossorigin="anonymous"> -->
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
+	<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
 
+<style type="text/css">
+img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 0px;
+}
+
+.gifContainer{
+	margin-bottom: 10px;
+}
+
+#editor, #editor-javascript, #editor-html, #editor-css { 
+    position: relative;
+    height: 500px;
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.website-preview-container {
+	padding-left: 0px;
+}
+
+#website-preview {
+	position: relative;
+	height: 500px;
+	width: 100%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin: 0px;
+	margin-bottom: 0px;
+	overflow-y: scroll;
+	overflow-x: auto;
+}
+
+.playground {
+	border-top: solid 1px black;
+	border-bottom: solid 1px black;
+}
+
+.button-container {
+	margin-bottom: 15px;
+}
+</style>
+</head>
 <body>
 
-<nav class="navbar">
+<nav class="navbar navbar-inverse">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -48,31 +91,18 @@
     <!-- /.container -->
 </nav>
 
-<div class="container info-container">
-	<div class="row remove-margin small-bottom-margin">
-		<img class="user-icon" src="http://via.placeholder.com/350x150">
-		<h4 itemprop="name">"Giphy API Images Example"<br><small>Giphy API Snippet by <a href="#" title="JonP Profile">JonP</a></small>
-        </h4>
-	</div>
-	<div class="row remove-margin small-bottom-margin">
-		<button class="tag">Giphy</button>
-		<button class="tag">Javascript</button>
-		<button class="tag">HTML</button>
-		<button class="tag">CSS</button>
-	</div>
-	<div class="row remove-margin">
-		<button id="preview-button" class="myButton">Preview</button>
-		<button id="html-button" class="myButton">HTML</button>
-		<button id="css-button" class="myButton">CSS</button>
-		<button id="js-button" class="myButton">JS</button>
-	</div>
+<div class="container button-container">
+	<button id="preview-button">Preview</button>
+	<button id="html-button">HTML</button>
+	<button id="css-button">CSS</button>
+	<button id="js-button">JS</button>
 </div>
 
 
-<div class="container playground">
+<div class="playground">
 
 <div class="website-preview-container">
-	<div id="website-preview">
+	<div class="row" id="website-preview">
 		<div id="gifs">
 		</div>
 	</div>
